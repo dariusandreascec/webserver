@@ -4,9 +4,8 @@
     <list default="true" id="572e2040-33d2-479c-9a6b-b4bbb1902b18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/HttpServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/core/ServerListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/core/ServerListenerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vvslaboratory/httpserver/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vvslaboratory/httpserver/HttpServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vvslaboratory/httpserver/core/ServerListenerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vvslaboratory/httpserver/core/ServerListenerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
         <option value="package-info" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -41,12 +41,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.vvslaboratory.http" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.HttpParserTest">
     <configuration name="HttpServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.vvslaboratory.httpserver.HttpServer" />
       <module name="webserver" />
@@ -56,6 +66,24 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpParserTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="webserver" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vvslaboratory.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vvslaboratory.http" />
+      <option name="MAIN_CLASS_NAME" value="com.vvslaboratory.http.HttpParserTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,33 +108,49 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="600" y="181" key="#HttpParserTest" timestamp="1604791585759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="600" y="181" key="#HttpParserTest/0.0.1920.1040@0.0.1920.1040" timestamp="1604791585759" />
+    <state x="636" y="232" key="#Notifications" timestamp="1604788280027">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="232" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1604788280027" />
     <state x="661" y="317" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1604764040654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="317" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604764040654" />
-    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1604761689495">
+    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1604788393871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604761689495" />
-    <state width="1563" height="165" key="GridCell.Tab.0.bottom" timestamp="1604787654561">
+    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604788393871" />
+    <state width="1598" height="116" key="GridCell.Tab.0.bottom" timestamp="1604792363743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1563" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604787654561" />
-    <state width="1563" height="165" key="GridCell.Tab.0.center" timestamp="1604787654561">
+    <state width="1598" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
+    <state width="1598" height="116" key="GridCell.Tab.0.center" timestamp="1604792363743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1563" height="165" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604787654561" />
-    <state width="1563" height="165" key="GridCell.Tab.0.left" timestamp="1604787654561">
+    <state width="1598" height="116" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
+    <state width="1598" height="116" key="GridCell.Tab.0.left" timestamp="1604792363743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1563" height="165" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604787654561" />
-    <state width="1563" height="165" key="GridCell.Tab.0.right" timestamp="1604787654561">
+    <state width="1598" height="116" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
+    <state width="1598" height="116" key="GridCell.Tab.0.right" timestamp="1604792363743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1563" height="165" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604787654561" />
+    <state width="1598" height="116" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
     <state x="775" y="249" key="RollbackChangesDialog" timestamp="1604746260102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="775" y="249" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604746260102" />
+    <state x="535" y="174" key="SettingsEditor" timestamp="1604790423479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="535" y="174" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604790423479" />
+    <state x="774" y="232" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1604791470373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="774" y="232" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604791470373" />
   </component>
 </project>

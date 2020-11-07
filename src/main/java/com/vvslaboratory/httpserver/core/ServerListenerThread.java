@@ -31,36 +31,24 @@ public class ServerListenerThread extends Thread {
 
         try {
 
-            Socket socket = serverSocket.accept(); // prompts the socket that is listening to a port to accept any connections that arrives
+            while ( serverSocket.isBound() && !serverSocket.isClosed() ) {
+                Socket socket = serverSocket.accept(); // prompts the socket that is listening to a port to accept any connections that arrives
 
-            LOGGER.info(" * Connection accepted: " + socket.getInetAddress() );
+                LOGGER.info(" * Connection accepted: " + socket.getInetAddress());
 
-            InputStream inputStream = socket.getInputStream(); // reading something from the socket
-            OutputStream outputStream = socket.getOutputStream();
+                HttpConnectionWorkerThread workerThread = new HttpConnectionWorkerThread(socket);
+                workerThread.start();
 
-            // TODO we would read
-
-            // TODO we would writing
-            String html = "<html><head><title>Simple Java HTTP Server</title></head><body><h1>This page was served using my HTTP Server</h1></body></html>";
-
-            final String CRLF = "\n\r"; // 13, 10 ASCII
-
-            String response =
-                    "HTTP/1.1 200 OK" + CRLF + // Status Line : HTTP VERSION RESPONSE_CODE RESPONSE_MESSAGE
-                            "Content-Length: " + html.getBytes().length + CRLF +  // HEADER
-                            CRLF +
-                            html +
-                            CRLF + CRLF;
-
-            outputStream.write(response.getBytes());
-
-            inputStream.close();
-            outputStream.close();
-            socket.close();
-            serverSocket.close();
+            }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("Problem with setting socket", e);
+        }finally {
+            if(serverSocket != null) {
+                try {
+                    serverSocket.close();
+                } catch (IOException e) {}
+            }
         }
     }
 }
