@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="572e2040-33d2-479c-9a6b-b4bbb1902b18" name="Default Changelist" comment="" />
+    <list default="true" id="572e2040-33d2-479c-9a6b-b4bbb1902b18" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/config/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/config/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/util/Json.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/util/Json.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,6 +30,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1jTz1qNKWu85TYL4PpXuBpzVCgC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -89,5 +97,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1452" height="191" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603847081664" />
+    <state x="775" y="249" key="RollbackChangesDialog" timestamp="1604746260102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="249" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604746260102" />
   </component>
 </project>

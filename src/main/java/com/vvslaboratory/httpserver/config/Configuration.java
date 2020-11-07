@@ -1,5 +1,9 @@
 package com.vvslaboratory.httpserver.config;
 
+/**
+ *  Configuration POJO
+ */
+
 public class Configuration  {
    private int port;
    private String webroot;
