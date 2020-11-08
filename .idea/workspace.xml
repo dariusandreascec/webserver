@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="572e2040-33d2-479c-9a6b-b4bbb1902b18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/core/ServerListenerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/httpserver/core/ServerListenerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vvslaboratory/httpserver/core/ServerListenerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vvslaboratory/httpserver/core/ServerListenerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvslaboratory/http/HttpParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvslaboratory/http/HttpParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +16,9 @@
       <list>
         <option value="package-info" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -120,26 +120,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="317" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604764040654" />
-    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1604788393871">
+    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1604794871150">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604788393871" />
-    <state width="1598" height="116" key="GridCell.Tab.0.bottom" timestamp="1604792363743">
+    <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604794871150" />
+    <state width="1598" height="116" key="GridCell.Tab.0.bottom" timestamp="1604795319921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1598" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
-    <state width="1598" height="116" key="GridCell.Tab.0.center" timestamp="1604792363743">
+    <state width="1598" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604795319921" />
+    <state width="1598" height="116" key="GridCell.Tab.0.center" timestamp="1604795319921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1598" height="116" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
-    <state width="1598" height="116" key="GridCell.Tab.0.left" timestamp="1604792363743">
+    <state width="1598" height="116" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604795319921" />
+    <state width="1598" height="116" key="GridCell.Tab.0.left" timestamp="1604795319921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1598" height="116" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
-    <state width="1598" height="116" key="GridCell.Tab.0.right" timestamp="1604792363743">
+    <state width="1598" height="116" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604795319921" />
+    <state width="1598" height="116" key="GridCell.Tab.0.right" timestamp="1604795319921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1598" height="116" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604792363743" />
+    <state width="1598" height="116" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604795319921" />
+    <state x="700" y="250" key="Maven.ArtifactSearchDialog" timestamp="1604793952583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="700" y="250" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604793952583" />
     <state x="775" y="249" key="RollbackChangesDialog" timestamp="1604746260102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

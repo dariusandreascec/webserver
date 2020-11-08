@@ -6,6 +6,7 @@ import org.junit.jupiter.api.TestInstance;
 
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
@@ -22,7 +23,7 @@ class HttpParserTest {
     }
 
     @Test
-    void parseHttpRequest() {
+    void parseHttpRequest() throws IOException {
         httpParser.parseHttpRequest(
                 generateValidTestCase()
         );
