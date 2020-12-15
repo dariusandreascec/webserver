@@ -17,27 +17,62 @@ public class HttpParser {
     private static final int LF = 0x0A; // 10
 
 
-    public HttpRequest parseHttpRequest(InputStream inputStream) throws IOException {
+    public HttpRequest parseHttpRequest(InputStream inputStream) throws HttpParsingException {
         InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.US_ASCII);
 
         HttpRequest request = new HttpRequest();
 
-        parseHttpRequestLine(reader, request);
+        try {
+            parseHttpRequestLine(reader, request);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         parseHeaders(reader, request);
         parseBody(reader, request);
 
         return request;
     }
 
-    private void parseHttpRequestLine(InputStreamReader reader, HttpRequest request) throws IOException {
+    private void parseHttpRequestLine(InputStreamReader reader, HttpRequest request) throws IOException, HttpParsingException {
+        StringBuilder processingDataBuffer = new StringBuilder();
+        //deprecate debugger lines
+
+        boolean methodParsed = false;
+        boolean requestedTargetParsed = false;
 
         int _byte;
         while((_byte = reader.read()) >= 0) {
             if (_byte == CR){
                _byte = reader.read();
                if(_byte == LF){
+                   LOGGER.debug("Request Line VERSION to Process : {}", processingDataBuffer.toString()); // getting http version
+                   if(!methodParsed || ! requestedTargetParsed) {
+                       throw new HttpParsingException(HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+                   }
                    return;
                }
+            }
+            if(_byte == SP) {
+                //TODO Process previous data
+                if(!methodParsed) {
+                    LOGGER.debug("Request Line METHOD to Process : {}", processingDataBuffer.toString());
+                    request.setMethod(processingDataBuffer.toString());
+                    methodParsed = true;
+                } else if (!requestedTargetParsed) {
+                    LOGGER.debug("Request Line REQ TARGET to Process : {}", processingDataBuffer.toString());
+                    requestedTargetParsed = true;
+                } else {
+                    throw  new HttpParsingException(HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+                }
+                //LOGGER.debug("Request Line to Process : {}", processingDataBuffer.toString()); // we get the GET and the request part
+                processingDataBuffer.delete(0, processingDataBuffer.length());
+            } else {
+                processingDataBuffer.append((char)_byte);
+                if(!methodParsed) {
+                    if(processingDataBuffer.length() > HttpMethod.MAX_LENGTH) {
+                        throw new HttpParsingException(HttpStatusCodes.SERVER_ERROR_501_NOT_IMPLEMENTED);
+                    }
+                }
             }
         }
 
