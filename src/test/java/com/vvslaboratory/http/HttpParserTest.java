@@ -151,10 +151,10 @@ class HttpParserTest {
     }
 
     @Test
-    void parseHttpRequestLineCRnoLF() throws IOException {
+    void parseHttpRequestLineCRnoLF1() throws IOException {
         try {
             HttpRequest request = httpParser.parseHttpRequest(
-                   generateBadTestCaseRequestLineOnlyCRnoLF()
+                   generateBadTestCaseRequestLineOnlyCRnoLF1()
             );
             fail();
         } catch (HttpParsingException e) {
@@ -163,10 +163,10 @@ class HttpParserTest {
     }
 
     @Test
-    void parseHttpEmptyRequestLine() throws IOException {
+    void parseHttpRequestLineCRnoLF2() throws IOException {
         try {
             HttpRequest request = httpParser.parseHttpRequest(
-                    generateBadTestCaseEmptyRequestLine()
+                    generateBadTestCaseRequestLineOnlyCRnoLF2()
             );
             fail();
         } catch (HttpParsingException e) {
@@ -175,10 +175,130 @@ class HttpParserTest {
     }
 
     @Test
-    void parseHttpRequestLineLFnoCR() throws IOException {
+    void parseHttpRequestLineCRnoLF3() throws IOException {
         try {
             HttpRequest request = httpParser.parseHttpRequest(
-                    generateBadTestCaseRequestLineOnlyLFnoCR()
+                    generateBadTestCaseRequestLineOnlyCRnoLF3()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpRequestLineCRnoLF4() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseRequestLineOnlyCRnoLF4()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+
+    @Test
+    void parseHttpEmptyRequestLine1() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseEmptyRequestLine1()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpEmptyRequestLine2() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseEmptyRequestLine3()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpEmptyRequestLine3() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseEmptyRequestLine3()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpEmptyRequestLine4() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseEmptyRequestLine4()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpEmptyRequestLine5() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseEmptyRequestLine5()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+    @Test
+    void parseHttpRequestLineLFnoCR1() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseRequestLineOnlyLFnoCR1()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpRequestLineLFnoCR2() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseRequestLineOnlyLFnoCR2()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpRequestLineLFnoCR3() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseRequestLineOnlyLFnoCR3()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCodes.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+
+    @Test
+    void parseHttpRequestLineLFnoCR4() throws IOException {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseRequestLineOnlyLFnoCR4()
             );
             fail();
         } catch (HttpParsingException e) {
@@ -338,7 +458,7 @@ class HttpParserTest {
         return inputStream;
     }
 
-    private InputStream generateBadTestCaseEmptyRequestLine() {
+    private InputStream generateBadTestCaseEmptyRequestLine1() {
         String rawData = "\r\n" +
                 "Host: localhost:8080\r\n" +
                 "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
@@ -352,7 +472,62 @@ class HttpParserTest {
         return inputStream;
     }
 
-    private InputStream generateBadTestCaseRequestLineOnlyCRnoLF() {
+    private InputStream generateBadTestCaseEmptyRequestLine2() {
+        String rawData = "\r\n" +
+                "\r\n" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseEmptyRequestLine3() {
+        String rawData = "\r\n" +
+                "\r\n" +
+                "\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseEmptyRequestLine4() {
+        String rawData = "\r\n" +
+                "Host: localhost:8080\r\n" +
+                "\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseEmptyRequestLine5() {
+        String rawData = "\r\n" +
+                "\r\n" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+    private InputStream generateBadTestCaseRequestLineOnlyCRnoLF1() {
         String rawData = "GET / AAAAA HTTP/1.1\r" + // <------- no LF
                 "Host: localhost:8080\r\n" +
                 "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
@@ -366,11 +541,95 @@ class HttpParserTest {
         return inputStream;
     }
 
-    private InputStream generateBadTestCaseRequestLineOnlyLFnoCR() {
+    private InputStream generateBadTestCaseRequestLineOnlyCRnoLF2() {
+        String rawData = "GET / AAAAA HTTP/1.1\r" + // <------- no LF
+                "Host: localhost:8080\r" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseRequestLineOnlyCRnoLF3() {
+        String rawData = "GET / AAAAA HTTP/1.1\r" + // <------- no LF
+                "Host: localhost:8080\r" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseRequestLineOnlyCRnoLF4() {
+        String rawData = "GET / AAAAA HTTP/1.1\r" + // <------- no LF
+                "Host: localhost:8080\r" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r" +
+                "\r";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseRequestLineOnlyLFnoCR1() {
         String rawData = "GET / AAAAA HTTP/1.1\n" + // <------- no CR
                 "Host: localhost:8080\r\n" +
                 "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
                 "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseRequestLineOnlyLFnoCR2() {
+        String rawData = "GET / AAAAA HTTP/1.1\n" + // <------- no CR
+                "Host: localhost:8080\n" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseRequestLineOnlyLFnoCR3() {
+        String rawData = "GET / AAAAA HTTP/1.1\n" + // <------- no CR
+                "Host: localhost:8080\n" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+        return inputStream;
+    }
+
+    private InputStream generateBadTestCaseRequestLineOnlyLFnoCR4() {
+        String rawData = "GET / AAAAA HTTP/1.1\n" + // <------- no CR
+                "Host: localhost:8080\n" +
+                "Accept-Language: en-US,en;q=0.9,ro;q=0.8\n" +
+                "\n";
 
         InputStream inputStream = new ByteArrayInputStream(
                 rawData.getBytes(

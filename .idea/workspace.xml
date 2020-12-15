@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="572e2040-33d2-479c-9a6b-b4bbb1902b18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvslaboratory/http/HttpRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvslaboratory/http/HttpParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvslaboratory/http/HttpParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vvslaboratory/http/HttpParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vvslaboratory/http/HttpParserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,22 +124,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="798" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604794871150" />
-    <state width="1607" height="173" key="GridCell.Tab.0.bottom" timestamp="1608033289508">
+    <state width="1598" height="166" key="GridCell.Tab.0.bottom" timestamp="1608038774788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1607" height="173" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608033289508" />
-    <state width="1607" height="173" key="GridCell.Tab.0.center" timestamp="1608033289508">
+    <state width="1598" height="166" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608038774788" />
+    <state width="1598" height="166" key="GridCell.Tab.0.center" timestamp="1608038774788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1607" height="173" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608033289508" />
-    <state width="1607" height="173" key="GridCell.Tab.0.left" timestamp="1608033289508">
+    <state width="1598" height="166" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608038774788" />
+    <state width="1598" height="166" key="GridCell.Tab.0.left" timestamp="1608038774788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1607" height="173" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608033289508" />
-    <state width="1607" height="173" key="GridCell.Tab.0.right" timestamp="1608033289508">
+    <state width="1598" height="166" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608038774788" />
+    <state width="1598" height="166" key="GridCell.Tab.0.right" timestamp="1608038774788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1607" height="173" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608033289508" />
+    <state width="1598" height="166" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608038774788" />
     <state width="1598" height="275" key="GridCell.Tab.1.bottom" timestamp="1608029565101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
